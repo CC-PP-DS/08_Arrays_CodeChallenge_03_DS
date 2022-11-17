@@ -15,7 +15,7 @@
 output(getSentence(["Ich","bin","Max"],"S"));
 output(getSentence(["Bist","du","Max"],"Q"));
 output(getSentence(["Ich","bin"],"E"));
-output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,","habbe","Sie","die"],"Q"));
+output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,"," habbe","Sie","die"],"Q"));
 
 function getSentence(arr, char){
     const GAP = " ";
@@ -24,7 +24,7 @@ function getSentence(arr, char){
 
     for (let i = 0; i < arr.length; i++)
     {
-        str += arr[i] + GAP;
+        str += arr[i].trim() + GAP;
     }
     return str.trim() + zeichen;
 }
